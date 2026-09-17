@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4択英単語 (1〜1900)</title>
+  <title>英単語クイズ (1〜1900)</title>
   <style>
     * {
       margin: 0;
@@ -205,7 +205,7 @@
 
   <!-- ホーム画面 -->
   <div id="home">
-    <h1>４択英単語 (1〜1900)</h1>
+    <h1>英単語クイズ (1〜1900)</h1>
     <h2>範囲を選択</h2>
 
     <div class="menu-scroll-container">
@@ -239,7 +239,7 @@
 
   <!-- クイズ画面 -->
   <div id="quiz" class="hidden">
-    <button id="homeNowButton" class="homeButton">ホームへ戻る</button>
+    <button id="homeNowButton" class="homeButton">🏠 ホームへ戻る</button>
 
     <div class="topBar">
       <span id="questionCount">問題 1 / 100</span>
@@ -255,7 +255,7 @@
 
   <!-- 結果画面 -->
   <div id="resultScreen" class="hidden">
-    <h1>乙！まだやるよな！？</h1>
+    <h1>🎉 お疲れさまでした！</h1>
     <div id="finalScore"></div>
     <button id="restartButton">もう一度挑戦</button>
     <button id="homeButton">ホームへ戻る</button>
@@ -2264,14 +2264,14 @@
     if (answer === currentQuestion.jp) {
       correct++;
       button.classList.add("correct");
-      message.innerHTML = "ふーん、、、やるやん";
+      message.innerHTML = "正解！";
     } else {
       wrong++;
       button.classList.add("wrong");
       buttons.forEach(btn => {
         if (btn.textContent === currentQuestion.jp) btn.classList.add("correct");
       });
-      message.innerHTML = `違いまーすｗえ？本当に受験生？ｗ 正解は「${currentQuestion.jp}」`;
+      message.innerHTML = `残念！ 正解は「${currentQuestion.jp}」`;
     }
 
     score.innerHTML = `⭕ ${correct} ❌ ${wrong}`;
